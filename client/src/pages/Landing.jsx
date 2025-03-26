@@ -1,40 +1,34 @@
-import React, { createContext } from "react";
+import React, { createContext, useState, useContext } from "react";
 import { Navbar } from "../components";
 import Wrapper from "../assets/wrappers/LandingPage";
-import { useState, useContext } from "react";
-import { WebLogo } from "../components";
-import landing_logo from "../assets/images/landing_logo.png";
+
+/*
+    Reminder: Need to change structure, put all the main page logic in HomePageLayout
+              because we only need 1 main outlet for our 3 page, also put the context in the 
+              HomepageLayout too and all the logic regarding of the usestate
+*/
 
 const LandingContext = createContext();
 const Landing = () => {
   const [showNav, setNavbar] = useState(false);
+  const [showActive, setActive] = useState(false);
   const toggleNav = () => {
     setNavbar(!showNav);
+  };
+  const toggleActive = () => {
+    setActive(!showActive);
   };
   return (
     <LandingContext.Provider
       value={{
         showNav,
         toggleNav,
+        toggleActive,
       }}
     >
       <Wrapper>
-        <Navbar />
-        <main>
-          <section id="Home">
-            <img
-              src={landing_logo}
-              alt="Landing Page Logo"
-              className="landing_logo"
-            />
-            <h1>ARCADIA</h1>
-            <h2>Sustainability Hub</h2>
-            <p>
-              Driving Progress Towards a <span>Circular Economy</span>
-            </p>
-          </section>
-          <section></section>
-        </main>
+        <Navbar isActive="Home" />
+        <main></main>
       </Wrapper>
     </LandingContext.Provider>
   );

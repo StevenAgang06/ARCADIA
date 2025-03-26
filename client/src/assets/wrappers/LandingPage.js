@@ -9,8 +9,8 @@ const Wrapper = styled.section`
   background-size: cover;
 
   main {
-    background: rgba(0, 0, 0, 0.5);
-    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    padding-block: 10rem;
   }
   main section {
     padding-block: 10rem;
@@ -19,7 +19,7 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: var(--white);
     text-align: center;
   }
   main section h1 {
@@ -38,6 +38,7 @@ const Wrapper = styled.section`
   main section p {
     font-size: 1.2rem;
     letter-spacing: var(--letter-spacing);
+    line-height: 1.5rem;
   }
 
   .landing_logo {

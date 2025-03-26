@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { HomeLayout, Landing } from "./pages";
+import { HomeLayout, Landing, Event } from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -9,6 +9,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Landing />,
+      },
+      {
+        path: "event",
+        element: <Event />,
       },
     ],
   },
