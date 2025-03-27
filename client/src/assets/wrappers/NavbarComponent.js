@@ -52,6 +52,7 @@ const Wrapper = styled.section`
     font-size: 2rem;
     color: #000000;
     font-weight: 600;
+    text-decoration: none;
   }
   .active {
     color: var(--white);

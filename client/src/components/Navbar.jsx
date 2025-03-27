@@ -1,16 +1,13 @@
-import React, { createContext } from "react";
+import React, { createContext, useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import Wrapper from "../assets/wrappers/NavbarComponent";
 import { WebLogo } from "../components";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
-import { useLandingContext } from "../pages/Landing";
-import { useContext, useState } from "react";
-
-const NavbarContext = createContext();
+import { useHomeLayoutContext } from "../pages/HomeLayout";
 
 const Navbar = ({ isActive }) => {
-  const [togglePage, setPage] = useState(false);
-  const { toggleNav, showNav } = useLandingContext();
+  const { toggleNav, showNav } = useHomeLayoutContext();
   return (
     <Wrapper>
       <header>
@@ -28,18 +25,26 @@ const Navbar = ({ isActive }) => {
         <nav className={showNav ? "navShow" : "navHide"}>
           <ul>
             <li>
-              <a className={isActive === "Home" ? "active" : null} href="#Home">
+              <Link
+                to="/"
+                className={isActive === "Home" ? "active" : "notActive"}
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">About</a>
+              <Link
+                to="/event"
+                className={isActive === "Event" ? "active" : "notActive"}
+              >
+                Events
+              </Link>
             </li>
             <li>
-              <a href="">Contact</a>
+              <Link to="/">Knowledge Hub</Link>
             </li>
             <li>
-              <a href="">Bruhh</a>
+              <Link to="/">Innovation</Link>
             </li>
           </ul>
         </nav>

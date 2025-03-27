@@ -1,7 +1,12 @@
 import React from "react";
+import { Navbar } from "../components";
 
 const Event = () => {
-  return <div>Event</div>;
+  return (
+    <section>
+      <Navbar isActive="Event" />
+    </section>
+  );
 };
 
 export default Event;
