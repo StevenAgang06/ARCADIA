@@ -2,7 +2,8 @@ import React from "react";
 import landing_logo from "../assets/images/landing_logo.png";
 import Wrapper from "../assets/wrappers/HomePage";
 import CarouselComponent from "./CarouselComponent";
-import { GridPhoto, KeyPillar } from "./";
+import { GridPhoto, KeyPillar, About } from "./";
+import Footer from "./Footer";
 
 const HomeContainer = () => {
   return (
@@ -40,7 +41,18 @@ const HomeContainer = () => {
         </p>
         <KeyPillar />
       </section>
-      <section className="slider">
+      <section className="fourth">
+        <article>
+          <h2>Our Focus in the Philippines Context</h2>
+          <p>Local Changes Cirular Solutions</p>
+        </article>
+        <article>
+          <p>
+            In the Philippines we focus on five interconnected plans that are
+            critical to advancing a circular economy and building climates
+            residence
+          </p>
+        </article>
         <CarouselComponent
           slides={[
             {
@@ -78,6 +90,12 @@ const HomeContainer = () => {
             },
           ]}
         />
+      </section>
+      <section className="fifth">
+        <About />
+      </section>
+      <section className="six">
+        <Footer />
       </section>
     </Wrapper>
   );

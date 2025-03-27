@@ -47,7 +47,7 @@ const Wrapper = styled.section`
     display: none;
   }
   .link {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     background-color: black;
     padding-block: 1rem;
@@ -55,12 +55,15 @@ const Wrapper = styled.section`
     width: 70%;
     border-radius: var(--border-radius);
     color: var(--white);
+    font-weight: 500;
     display: inline-block;
-    margin-block: 1rem;
+    margin-block: 3rem;
     text-align: center;
   }
   .link:hover {
-    background-color: white;
+    background-color: rgb(70, 150, 126);
+    box-shadow: var(--shadow-3);
+    color: var(--white);
   }
 `;
 

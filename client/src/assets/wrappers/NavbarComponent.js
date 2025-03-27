@@ -22,6 +22,7 @@ const Wrapper = styled.section`
     font-size: 2rem;
     font-family: serif;
     color: var(--white);
+    padding-top: 1rem;
   }
   nav {
     overflow: auto;

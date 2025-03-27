@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.section`
   main {
+    max-width: 100%;
   }
 `;
 

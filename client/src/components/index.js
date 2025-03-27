@@ -5,3 +5,4 @@ export { default as GridPhoto } from "./GridPhoto";
 export { default as KeyPillar } from "./KeyPillar";
 export { default as Carousel } from "./CarouselComponent";
 export { default as About } from "./About";
+export { default as Footer } from "./Footer";

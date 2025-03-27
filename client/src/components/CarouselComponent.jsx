@@ -15,7 +15,7 @@ const CarouselComponent = (
 
   return (
     <Wrapper>
-      <Carousel keyboard="true" pause="hover">
+      <Carousel keyboard="true" pause="hover" className="slides">
         {slides.map((slide, index) => (
           <Carousel.Item key={slide.key} interval={slide.interval}>
             <h1 className="title">{slide.firstLabel}</h1>

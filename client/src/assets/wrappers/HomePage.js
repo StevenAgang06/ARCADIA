@@ -4,6 +4,8 @@ const Wrapper = styled.section`
   h2 {
     font-weight: var(--h2-weight);
     line-height: var(--h2-line);
+    padding-block: 1rem;
+    font-size: 2.7rem;
   }
   p {
     font-weight: 500;
@@ -40,10 +42,10 @@ const Wrapper = styled.section`
   .landing_logo {
     width: 20rem;
   }
-
   .second,
-  .third {
-    width: 100%;
+  .third,
+  .fifth,
+  .six {
     padding-block: 3rem;
     text-align: center;
     padding-inline: 1rem;
@@ -52,10 +54,14 @@ const Wrapper = styled.section`
     justify-content: center;
   }
   .second h2,
-  .third h2 {
+  .third h2,
+  .fourth h2 {
     color: #087f5b;
-    padding-block: 1rem;
-    font-size: 2.7rem;
+  }
+  .second p,
+  .third p {
+    text-align: left;
+    text-indent: 1rem;
   }
   .second p {
     margin: 1rem auto;
@@ -68,7 +74,27 @@ const Wrapper = styled.section`
   }
   .third p {
     margin-block: 1rem;
-    text-align: left;
+  }
+  .fourth {
+    width: 100%;
+    margin-block: 3rem;
+  }
+  .fourth p {
+    text-indent: 1rem;
+  }
+  .fourth article:nth-child(1) {
+    text-align: center;
+  }
+  .fourth article:nth-child(1) p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+  .fourth article:nth-child(2) {
+    padding-inline: 3rem;
+  }
+  .fifth {
+    margin-block-start: 15rem;
+    background-color: #087f5b;
   }
 `;
 
