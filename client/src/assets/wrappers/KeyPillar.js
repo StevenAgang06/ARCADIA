@@ -8,7 +8,7 @@ const Wrapper = styled.section`
     margin-block: 3rem;
     width: 100%;
     flex-wrap: wrap;
-    margin: 3rem auto;
+    margin: 5rem auto;
     padding: 1rem;
   }
   .key-btn {
@@ -39,6 +39,15 @@ const Wrapper = styled.section`
       rgb(70, 150, 126)
     );
     box-shadow: var(--shadow-3);
+  }
+  .key-btn:hover {
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgb(70, 150, 126)
+    );
+    box-shadow: var(--shadow-3);
+    color: var(--white);
   }
   .show {
     display: block;

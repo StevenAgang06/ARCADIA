@@ -7,7 +7,6 @@ const Wrapper = styled.section`
     column-gap: 0.5rem;
     width: 30rem;
     margin: 5rem auto;
-
     row-gap: 0.5rem;
   }
   figure img {

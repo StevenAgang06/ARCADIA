@@ -72,6 +72,7 @@ html {
 
   --border-radius: 0.25rem;
   --transition: 0.3s ease-in-out all;
+  --faster-transition: 200ms ease-in-out all;
   --max-width: 1120px;
   --fixed-width: 600px;
   --fluid-width: 90vw;

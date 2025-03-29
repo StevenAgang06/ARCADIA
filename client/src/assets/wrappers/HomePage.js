@@ -4,7 +4,6 @@ const Wrapper = styled.section`
   h2 {
     font-weight: var(--h2-weight);
     line-height: var(--h2-line);
-    padding-block: 1rem;
     font-size: 2.7rem;
   }
   p {
@@ -57,6 +56,7 @@ const Wrapper = styled.section`
   .third h2,
   .fourth h2 {
     color: #087f5b;
+    padding-block: 3rem;
   }
   .second p,
   .third p {
@@ -73,7 +73,7 @@ const Wrapper = styled.section`
     padding-inline: 3rem;
   }
   .third p {
-    margin-block: 1rem;
+    margin-block: 3rem;
   }
   .fourth {
     width: 100%;

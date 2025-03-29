@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
+  .footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
   section {
     padding: 2rem;
   }
@@ -22,6 +23,12 @@ const Wrapper = styled.section`
     font-weight: 400;
     font-size: 1.2rem;
     line-height: 1.3rem;
+  }
+  section a {
+    margin-block: 1rem;
+    display: block;
+    font-size: 1.4rem;
+    text-decoration: none;
   }
 `;
 

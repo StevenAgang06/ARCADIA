@@ -8,6 +8,7 @@ const Wrapper = styled.section`
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
+    z-index: 999999;
   }
   header {
     box-shadow: var(--shadow-2);
@@ -28,7 +29,6 @@ const Wrapper = styled.section`
     overflow: auto;
     transition: var(--transition);
     width: 100%;
-    height: 0px;
   }
   .navShow {
     padding-block: 1.5rem;
@@ -49,11 +49,14 @@ const Wrapper = styled.section`
     margin: 1.5rem;
   }
   ul li a {
-    transition: var(--transition);
+    transition: var(--faster-transition);
     font-size: 2rem;
     color: #000000;
     font-weight: 600;
     text-decoration: none;
+  }
+  ul li a:hover {
+    color: var(--white);
   }
   .active {
     color: var(--white);
