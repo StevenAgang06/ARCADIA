@@ -7,7 +7,7 @@ const Wrapper = styled.section`
     font-size: 2.7rem;
   }
   p {
-    font-weight: 500;
+    font-weight: 400;
     font-size: var(--p-size);
     letter-spacing: var(--p-spacing);
     line-height: var(--p-line);
@@ -43,8 +43,17 @@ const Wrapper = styled.section`
   }
   .second,
   .third,
-  .fifth,
   .six {
+    padding-block: 3rem;
+    text-align: center;
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90vw;
+    margin-block: 3rem;
+  }
+  .fifth {
     padding-block: 3rem;
     text-align: center;
     padding-inline: 1rem;
@@ -61,7 +70,6 @@ const Wrapper = styled.section`
   .second p,
   .third p {
     text-align: left;
-    text-indent: 1rem;
   }
   .second p {
     margin: 1rem auto;
@@ -78,9 +86,6 @@ const Wrapper = styled.section`
   .fourth {
     width: 100%;
     margin-block: 3rem;
-  }
-  .fourth p {
-    text-indent: 1rem;
   }
   .fourth article:nth-child(1) {
     text-align: center;

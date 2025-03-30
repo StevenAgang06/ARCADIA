@@ -6,4 +6,6 @@ export { default as KeyPillar } from "./KeyPillar";
 export { default as Carousel } from "./CarouselComponent";
 export { default as About } from "./About";
 export { default as Footer } from "./Footer";
-export { default as Featured } from "./event/Featured";
+export { default as Featured } from "./Featured";
+export { default as CarouselComponent } from "./CarouselComponent";
+export { default as Login } from "./LoginForm";

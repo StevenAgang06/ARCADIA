@@ -5,9 +5,7 @@ import Query from "../assets/wrappers/EventsQuery";
 import landing_logo from "../assets/images/landing_logo.png";
 import { Featured, Footer, CarouselComponent } from "../components";
 
-// Notes: Need to edit carousel to display 3 to 2 item at a time when the screen get big
-
-const Event = () => {
+const KnowledgeHub = () => {
   const data = [
     {
       _id: 0,
@@ -37,7 +35,7 @@ const Event = () => {
   return (
     <Wrapper>
       <Query>
-        <Navbar isActive="Event" />
+        <Navbar isActive="KnowledgeHub" />
         <main>
           <section className="first">
             <section>
@@ -47,10 +45,8 @@ const Event = () => {
                 className="landing_logo"
               />
               <h1>ARCADIA</h1>
-              <h2>Environmental Events</h2>
-              <p>
-                Foster discourse and drive actionable sustainability solutions
-              </p>
+              <h2>Knowledge Hub</h2>
+              <p>Your knowledge hub for Waste Management</p>
             </section>
           </section>
           <section className="second">
@@ -60,7 +56,7 @@ const Event = () => {
           </section>
           <section className="third">
             <article className="row">
-              <h2>Upcoming Events</h2>
+              <h2>Optional Editorials</h2>
               <CarouselComponent
                 slides={[
                   {
@@ -115,7 +111,7 @@ const Event = () => {
               />
             </article>
             <article className="row">
-              <h2>Previous Events</h2>
+              <h2>Publish Waste Reports</h2>
               <CarouselComponent
                 slides={[
                   {
@@ -179,4 +175,4 @@ const Event = () => {
   );
 };
 
-export default Event;
+export default KnowledgeHub;

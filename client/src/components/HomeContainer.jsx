@@ -8,8 +8,8 @@ import Footer from "./Footer";
 
 const HomeContainer = () => {
   return (
-    <Query>
-      <Wrapper>
+    <Wrapper>
+      <Query>
         <section className="first">
           <section>
             <img
@@ -26,12 +26,12 @@ const HomeContainer = () => {
           <section>
             <h2>A Growing Network for impact</h2>
             <p>
-              Arcadia brings together a diverse ecosystem of change-makers
-              including the academe, local and national government agencies,
-              NGOs,industry association and chambers of ecommerce. By fostering
-              cross sector collaboration, we ensure that circular economy
-              strategies are informed, inclusive, and built for long-term
-              sustainability.
+              <span> Arcadia </span> brings together a diverse ecosystem of
+              change-makers including the academe, local and national government
+              agencies, NGOs,industry association and chambers of ecommerce. By
+              fostering cross sector collaboration, we ensure that circular
+              economy strategies are informed, inclusive, and built for
+              long-term sustainability.
             </p>
           </section>
           <GridPhoto />
@@ -76,7 +76,7 @@ const HomeContainer = () => {
               {
                 key: 1,
                 image:
-                  "https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                  "https://images.unsplash.com/photo-1600716051809-e997e11a5d52?q=80&w=2650&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 alt: "Waste Management",
                 interval: 5000,
                 firstLabel: "PLASTIC PATHWAYS",
@@ -87,7 +87,7 @@ const HomeContainer = () => {
               {
                 key: 2,
                 image:
-                  "https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                  "https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 alt: "Waste Management",
                 interval: 5000,
                 firstLabel: "PLASTIC PATHWAYS",
@@ -104,8 +104,8 @@ const HomeContainer = () => {
         <section className="six">
           <Footer />
         </section>
-      </Wrapper>
-    </Query>
+      </Query>
+    </Wrapper>
   );
 };
 

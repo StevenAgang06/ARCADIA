@@ -43,7 +43,14 @@ const Navbar = ({ isActive }) => {
                 </Link>
               </li>
               <li>
-                <Link to="/">Knowledge Hub</Link>
+                <Link
+                  to="/knowledgehub"
+                  className={
+                    isActive === "KnowledgeHub" ? "active" : "notActive"
+                  }
+                >
+                  Knowledge Hub
+                </Link>
               </li>
               <li>
                 <Link to="/">Innovation</Link>

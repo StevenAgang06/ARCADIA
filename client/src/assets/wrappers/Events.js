@@ -1,13 +1,21 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
+  .second,
+  .third {
+    width: 90vw;
+    margin: 3rem auto;
+    padding-block: 3rem;
+    padding-block: 3rem;
+  }
   h2 {
     font-weight: var(--h2-weight);
     line-height: var(--h2-line);
     font-size: 2.7rem;
+    color: #087f5b;
   }
   p {
-    font-weight: 500;
+    font-weight: 400;
     font-size: var(--p-size);
     letter-spacing: var(--p-spacing);
     line-height: var(--p-line);
@@ -37,9 +45,30 @@ const Wrapper = styled.section`
   .first section h2 {
     font-size: var(--h2-size);
     margin-block-end: 1rem;
+    color: var(--white);
   }
   .landing_logo {
     width: 20rem;
+  }
+  .third {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .third h2 {
+    text-align: center;
+    margin-block: 5rem;
+  }
+  .six {
+    padding-block: 3rem;
+    text-align: center;
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90vw;
+    margin-block: 3rem;
   }
 `;
 

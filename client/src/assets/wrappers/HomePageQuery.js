@@ -34,9 +34,6 @@ const Query = styled.section`
     .fifth p {
       padding-inline: 5rem;
     }
-    .six .footer-container {
-      flex-direction: row;
-    }
   }
 
   @media (min-width: 824px) {
@@ -84,6 +81,9 @@ const Query = styled.section`
     }
     .third section .link {
       width: 30%;
+    }
+    .fourth p {
+      text-align: center;
     }
   }
 `;

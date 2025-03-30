@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.section`
   .footer-container {
-    width: 100%;
+    width: 90vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -29,6 +29,11 @@ const Wrapper = styled.section`
     display: block;
     font-size: 1.4rem;
     text-decoration: none;
+  }
+  @media (min-width: 600px) {
+    .footer-container {
+      flex-direction: row;
+    }
   }
 `;
 
