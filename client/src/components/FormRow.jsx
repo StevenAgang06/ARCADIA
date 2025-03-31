@@ -1,7 +1,6 @@
 import React from "react";
-import { Form } from "react-router-dom";
-import Wrapper from "../assets/wrappers/LoginForm";
-const LoginForm = ({ type, name, labelText, defaultValue }) => {
+import Wrapper from "../assets/wrappers/FormRow";
+const FormRow = ({ type, name, labelText, defaultValue }) => {
   return (
     <Wrapper>
       <label htmlFor={name} className="label">
@@ -18,4 +17,4 @@ const LoginForm = ({ type, name, labelText, defaultValue }) => {
   );
 };
 
-export default LoginForm;
+export default FormRow;

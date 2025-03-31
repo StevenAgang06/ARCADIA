@@ -6,6 +6,7 @@ import {
   ErrorPage,
   KnowledgeHub,
   Login,
+  Register,
 } from "./pages";
 
 const router = createBrowserRouter([
@@ -31,10 +32,6 @@ const router = createBrowserRouter([
   {
     path: "/error",
     element: <ErrorPage />,
-  },
-  {
-    path: "/master",
-    element: <Login />,
   },
 ]);
 

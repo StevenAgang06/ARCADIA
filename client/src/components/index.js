@@ -8,4 +8,5 @@ export { default as About } from "./About";
 export { default as Footer } from "./Footer";
 export { default as Featured } from "./Featured";
 export { default as CarouselComponent } from "./CarouselComponent";
-export { default as Login } from "./LoginForm";
+export { default as FormRow } from "./FormRow";
+export { default as FormModal } from "./FormModal";
