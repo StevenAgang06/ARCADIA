@@ -1,30 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import FormRow from "../components/FormRow";
-import Wrapper from "../assets/wrappers/Login";
+import Wrapper from "../assets/wrappers/FormModal";
 import { Form } from "react-router-dom";
-import { navigation } from "../utils/formRequest";
+import { navigation, action } from "../utils/formRequest";
+import customFetch from "../utils/customFetch";
 const Login = () => {
   const isLogin = navigation();
-  console.log(isLogin);
   return (
     <Wrapper>
       <main>
-        <Form method="post" className="form">
+        <Form method="post" className="form" action={loginAction}>
           <h4>Login</h4>
           <FormRow type="email" name="email" defaultValue="suagang@gmail.com" />
           <FormRow type="password" name="password" defaultValue="secret123" />
           <button type="submit" className="btn" disabled={isLogin}>
             {isLogin ? "Submitting..." : "Login"}
           </button>
-          <p>
-            Don't have an account?
-            <Link to="/register"> Register</Link>
-          </p>
         </Form>
       </main>
     </Wrapper>
   );
+};
+
+export const loginAction = async ({ request }) => {
+  return action(request, "post", "/sample", "Successfully Login", "/");
 };
 
 export default Login;

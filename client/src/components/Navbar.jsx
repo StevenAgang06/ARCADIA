@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import { Form, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Wrapper from "../assets/wrappers/NavbarComponent";
 import Query from "../assets/wrappers/Query";
 import { WebLogo, FormModal } from "../components";
@@ -10,6 +10,7 @@ import { useHomeLayoutContext } from "../pages/HomeLayout";
 const Navbar = ({ isActive }) => {
   const { toggleNav, showNav } = useHomeLayoutContext();
   const [modalShow, setModalShow] = useState(false);
+  const [modalPage, setModalPage] = useState("");
   return (
     <Query>
       <Wrapper>
@@ -53,25 +54,44 @@ const Navbar = ({ isActive }) => {
                   Knowledge Hub
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/">Innovation</Link>
+              </li> */}
+              <li>
+                <button
+                  type="button"
+                  className="btn"
+                  onClick={() => {
+                    setModalShow(true);
+                    setModalPage("login");
+                  }}
+                >
+                  Login
+                </button>
               </li>
               <li>
                 <button
                   type="button"
                   className="btn"
-                  onClick={() => setModalShow(true)}
+                  onClick={() => {
+                    setModalShow(true);
+                    setModalPage("register");
+                  }}
                 >
-                  Login
-                </button>
-                <button type="button" className="btn">
                   Register
                 </button>
               </li>
             </ul>
           </nav>
         </header>
-        <FormModal show={modalShow} onHide={() => setModalShow(false)} />
+        <FormModal
+          show={modalShow}
+          onHide={() => {
+            setModalShow(false);
+            setModalPage("");
+          }}
+          purpose={modalPage}
+        />
       </Wrapper>
     </Query>
   );

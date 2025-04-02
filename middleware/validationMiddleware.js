@@ -1,6 +1,7 @@
 import { body, param, validationResult } from "express-validator";
 import ErrorsHandler from "../errors/customError.js";
 import { user } from "../controller/userController.js";
+import { role } from "../utils/constant.js";
 
 const validationErrors = (validateValue) => {
   return [

@@ -1,56 +1,31 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { Form } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
+import FormRow from "./FormRow";
+import { navigation } from "../utils/formRequest";
+import Wrapper from "../assets/wrappers/FormModal";
+import { Login, Register } from "../pages";
 
-const FormModal = ({
-  show,
-  onHide,
-  title,
-  purpose,
-  type,
-  name,
-  labelText,
-  defaultValue,
-}) => {
+const LoginModal = ({ show, onHide, purpose }) => {
   return (
-    <Modal
-      show={show}
-      onHide={onHide}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">Hi</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        {/* <Form>
-          <FormRow
-            type={type}
-            name={name}
-            defaultValue={defaultValue || "Your Email"}
-          />
-          <FormRow
-            method="post"
-            className="form"
-            type={type}
-            name={name}
-            defaultValue={defaultValue || "Password"}
-          />
-          <button type="submit" className="btn" disabled={purpose}>
-           purpose ? "Submitting..." : "Login"}
-          </button>
-          {purpose === "login" ? (
-            <p>
-              Don't have an account?
-              <Link to="/register"> Register</Link>
-            </p>
-          ) : null}
-        </Form> */}
-      </Modal.Body>
-    </Modal>
+    <Wrapper>
+      <main>
+        <Modal
+          show={show}
+          onHide={onHide}
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+        >
+          <Modal.Header closeButton></Modal.Header>
+          <Modal.Body>
+            {purpose === "login" ? <Login /> : null}
+            {purpose === "register" ? <Register /> : null}
+          </Modal.Body>
+        </Modal>
+      </main>
+    </Wrapper>
   );
 };
 
-export default FormModal;
+export default LoginModal;

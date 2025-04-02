@@ -9,6 +9,10 @@ import {
   Register,
 } from "./pages";
 
+// Action
+
+import { loginAction } from "./pages/Login";
+
 const router = createBrowserRouter([
   {
     path: "/",

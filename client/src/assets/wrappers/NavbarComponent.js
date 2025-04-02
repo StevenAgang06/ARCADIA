@@ -46,7 +46,8 @@ const Wrapper = styled.section`
     cursor: pointer;
   }
   ul li {
-    margin: 1.5rem;
+    margin-inline: 1.5rem;
+    margin-block: 1rem;
   }
   ul li a {
     transition: var(--faster-transition);
@@ -55,7 +56,8 @@ const Wrapper = styled.section`
     font-weight: 600;
     text-decoration: none;
   }
-  ul li a:hover {
+  ul li a:hover,
+  .btn:hover {
     color: var(--white);
   }
   .active {
@@ -69,6 +71,15 @@ const Wrapper = styled.section`
     padding: 0;
     background-color: transparent;
     border: none;
+  }
+  .btn {
+    padding: 0;
+    align-self: center;
+    font-size: 2rem;
+    border: none;
+    font-weight: 600;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px transparent;
   }
 `;
 

@@ -19,6 +19,9 @@ if (process.env.NODE_ENV === "development") {
 }
 const port = process.env.PORT || 5100;
 
+app.get("/arcadia/sample", (req, res) => {
+  res.status(200).json("Working");
+});
 app.get("/", (req, res) => {
   res.status(404).json({ msg: "Welcome User" });
 });
