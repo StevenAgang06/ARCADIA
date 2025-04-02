@@ -57,30 +57,6 @@ const Navbar = ({ isActive }) => {
               {/* <li>
                 <Link to="/">Innovation</Link>
               </li> */}
-              <li>
-                <button
-                  type="button"
-                  className="btn"
-                  onClick={() => {
-                    setModalShow(true);
-                    setModalPage("login");
-                  }}
-                >
-                  Login
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className="btn"
-                  onClick={() => {
-                    setModalShow(true);
-                    setModalPage("register");
-                  }}
-                >
-                  Register
-                </button>
-              </li>
             </ul>
           </nav>
         </header>

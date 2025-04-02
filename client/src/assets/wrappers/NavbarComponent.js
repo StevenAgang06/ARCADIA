@@ -8,7 +8,7 @@ const Wrapper = styled.section`
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
-    z-index: 999999;
+    z-index: 1;
   }
   header {
     box-shadow: var(--shadow-2);

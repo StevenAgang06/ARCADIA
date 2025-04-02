@@ -3,6 +3,11 @@ import styled from "styled-components";
 const Wrapper = styled.section`
   main {
     width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 20rem;
   }
   main h4 {
     text-align: center;
@@ -33,12 +38,14 @@ const Wrapper = styled.section`
     color: var(--white);
     transition: var(--transition):                                                                                             
   }
-
   .btn:hover{
     background-color:  #087f5b;
     color: var(--white);
   }
-
+  a{
+    text-decoration: none;
+    margin-inline: 0.2rem;
+  }
   p{
   margin-block: 2rem;
     text-align: center;

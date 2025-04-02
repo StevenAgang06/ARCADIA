@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import { role } from "../utils/constant.js";
 import { hashPassword } from "../utils/hashPassword.js";
+import { Conflict } from "../Error/customError.js";
 
 const userSchema = new mongoose.Schema(
   {
@@ -33,6 +34,12 @@ export const userModelAction = {
     return user;
   },
   createUser: async (req, res) => {
+    const { email } = req.body;
+    console.log(email);
+    const emailCheck = await userModel.findOne({ email });
+    if (emailCheck) {
+      throw new Conflict("Email Already Exist");
+    }
     const isFirstAccount = (await userModel.countDocuments()) === 0;
     req.body.role = isFirstAccount ? "admin" : "user";
     const hashedassword = await hashPassword(req.body.password);

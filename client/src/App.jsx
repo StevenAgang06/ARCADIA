@@ -12,6 +12,7 @@ import {
 // Action
 
 import { loginAction } from "./pages/Login";
+import { registerAction } from "./pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,16 @@ const router = createBrowserRouter([
         element: <KnowledgeHub />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+    action: loginAction,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+    action: registerAction,
   },
   {
     path: "/error",

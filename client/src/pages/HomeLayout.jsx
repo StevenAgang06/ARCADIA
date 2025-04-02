@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext } from "react";
 import { Outlet } from "react-router-dom";
-
+import { LoginAndRegisterUtil } from "../components";
 const HomeLayoutContext = createContext();
 
 const HomeLayout = () => {
@@ -18,6 +18,7 @@ const HomeLayout = () => {
       <section>
         <Outlet />
       </section>
+      <LoginAndRegisterUtil />
     </HomeLayoutContext.Provider>
   );
 };

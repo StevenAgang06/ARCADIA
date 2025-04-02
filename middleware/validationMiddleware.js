@@ -1,7 +1,5 @@
 import { body, param, validationResult } from "express-validator";
-import ErrorsHandler from "../errors/customError.js";
-import { user } from "../controller/userController.js";
-import { role } from "../utils/constant.js";
+import { Unauthorized, BadRequest } from "../Error/customError.js";
 
 const validationErrors = (validateValue) => {
   return [
@@ -10,13 +8,11 @@ const validationErrors = (validateValue) => {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
         const errorMessage = errors.array().map((error) => error.msg);
-        if (errorMessage[0].startsWith("Not Authorized")) {
-          throw new ErrorsHandler.Unauthorized(
-            "Not authorized to access this routes"
-          );
+        if (errorMessage[0].startsWith("Not authorized")) {
+          throw new Unauthorized("Not authorized to access this routes");
         }
         if (errorMessage) {
-          throw new ErrorsHandler.BadRequest(errorMessage);
+          throw next(new BadRequest(errorMessage));
         }
       }
       next();

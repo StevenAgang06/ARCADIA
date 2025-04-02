@@ -1,8 +1,8 @@
 import React from "react";
-import Wrapper from "../assets/wrappers/FormModal";
+import Wrapper from "../assets/wrappers/LoginAndRegisterForm";
 import { Form, Link } from "react-router-dom";
 import { FormRow } from "../components";
-import { navigation } from "../utils/formRequest";
+import { action, navigation } from "../utils/formRequest";
 const Register = () => {
   const isRegister = navigation();
   return (
@@ -17,9 +17,26 @@ const Register = () => {
           <button type="submit" className="btn" disabled={isRegister}>
             {isRegister ? "Submitting..." : "Register"}
           </button>
+          <p>
+            Already have an account?
+            <Link to="/login">Login</Link>
+          </p>
+          <p>
+            <Link to="/">Back Home</Link>
+          </p>
         </Form>
       </main>
     </Wrapper>
+  );
+};
+
+export const registerAction = async ({ request }) => {
+  return action(
+    request,
+    "post",
+    "/register",
+    "Successfully Registered",
+    "/login"
   );
 };
 

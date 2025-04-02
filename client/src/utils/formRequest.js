@@ -18,6 +18,7 @@ export const action = async (
     return redirect(redirectTo);
   } catch (error) {
     toast.error(error?.response?.data?.message);
+    console.log(error);
     return error;
   }
 };

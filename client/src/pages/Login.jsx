@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import FormRow from "../components/FormRow";
-import Wrapper from "../assets/wrappers/FormModal";
+import Wrapper from "../assets/wrappers/LoginAndRegisterForm";
 import { Form } from "react-router-dom";
 import { navigation, action } from "../utils/formRequest";
-import customFetch from "../utils/customFetch";
 const Login = () => {
   const isLogin = navigation();
   return (
@@ -16,6 +16,13 @@ const Login = () => {
           <button type="submit" className="btn" disabled={isLogin}>
             {isLogin ? "Submitting..." : "Login"}
           </button>
+          <p>
+            Don't have an account?
+            <Link to="/register">Register</Link>
+          </p>
+          <p>
+            <Link to="/">Back Home</Link>
+          </p>
         </Form>
       </main>
     </Wrapper>
@@ -23,7 +30,7 @@ const Login = () => {
 };
 
 export const loginAction = async ({ request }) => {
-  return action(request, "post", "/sample", "Successfully Login", "/");
+  return action(request, "post", "/login", "Successfully Login", "/");
 };
 
 export default Login;
