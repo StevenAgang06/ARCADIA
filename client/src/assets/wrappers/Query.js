@@ -7,6 +7,9 @@ const Query = styled.section`
     }
   }
   @media (min-width: 924px) {
+    header section {
+      flex-wrap: nowrap;
+    }
     .toggle-btn {
       display: none;
     }

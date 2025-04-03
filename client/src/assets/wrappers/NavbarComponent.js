@@ -2,22 +2,26 @@ import styled from "styled-components";
 const Wrapper = styled.section`
   header {
     padding: 1.5rem;
-    display: flex;
-    justify-content: space-between;
     position: fixed;
-    flex-wrap: wrap;
     width: 100%;
+    z-index: 10;
+  }
+  header section {
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    flex-wrap: wrap;
   }
   header {
     box-shadow: var(--shadow-2);
     background-color: var(--nav-Background);
   }
-  header figure {
+  header section figure {
     display: flex;
   }
-  header figure p {
+  header section figure p {
     align-self: center;
     padding-inline: 1rem;
     font-size: 2rem;
@@ -25,9 +29,9 @@ const Wrapper = styled.section`
     color: var(--white);
     padding-top: 1rem;
   }
-  nav {
+  header section nav {
     overflow: auto;
-    transition: var(--transition);
+    transition: 200ms ease-in-out;
     width: 100%;
   }
   .navShow {

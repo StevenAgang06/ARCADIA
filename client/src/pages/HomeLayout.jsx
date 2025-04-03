@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from "react";
-import { Outlet } from "react-router-dom";
+import { data, Outlet } from "react-router-dom";
 import { LoginAndRegisterUtil } from "../components";
 const HomeLayoutContext = createContext();
 

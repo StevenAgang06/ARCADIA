@@ -18,11 +18,6 @@ const Wrapper = styled.section`
   .overlay:hover {
     stroke: green;
   }
-  .popover-body {
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
-  }
 `;
 
 export default Wrapper;

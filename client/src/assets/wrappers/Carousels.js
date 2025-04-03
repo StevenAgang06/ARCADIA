@@ -39,6 +39,9 @@ const Wrapper = styled.section`
     margin-block: 1rem;
     text-align: center;
   }
+  .desc {
+    text-align: center;
+  }
   .carousel-item {
     max-width: 90vw;
   }
@@ -53,17 +56,27 @@ const Wrapper = styled.section`
   button {
     font-size: 1.3rem;
     border: none;
-    padding-inline: 1.5rem;
     padding-block: 0.5rem;
     margin-inline: 0.5rem;
     border: 1px solid #38d9a9;
     background-color: transparent;
     color: var(--white);
     border-radius: var(--border-radius);
+    transition: var(--transition);
+    margin-block: 0.5rem;
+  }
+  .btn {
+    width: 100%;
+  }
+
+  button:hover {
+    background-color: green;
+    border: none;
+    transform: scale(1.1);
   }
 
   @media (min-width: 400px) {
-    .btn {
+    .btnContainer {
       display: flex;
       justify-content: center;
       width: 50%;

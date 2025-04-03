@@ -1,11 +1,8 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-  .second,
-  .third {
-    width: 90vw;
-    margin: 3rem auto;
-    padding-block: 3rem;
+  .second {
+    width: 100%;
     padding-block: 3rem;
   }
   h2 {
@@ -51,14 +48,15 @@ const Wrapper = styled.section`
     width: 20rem;
   }
   .third {
+    max-width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
   }
   .third h2 {
     text-align: center;
-    margin-block: 5rem;
   }
   .six {
     padding-block: 3rem;
@@ -67,8 +65,11 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90vw;
+    width: 100%;
     margin-block: 3rem;
+  }
+  .carousel-item-container {
+    max-width: 100%;
   }
 `;
 

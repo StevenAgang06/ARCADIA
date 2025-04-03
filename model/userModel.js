@@ -41,7 +41,16 @@ export const userModelAction = {
       throw new Conflict("Email Already Exist");
     }
     const isFirstAccount = (await userModel.countDocuments()) === 0;
-    req.body.role = isFirstAccount ? "admin" : "user";
+    const isSecondAccount = (await userModel.countDocuments()) === 1;
+    const isThirdAccount = (await userModel.countDocuments()) === 2;
+
+    req.body.role = isFirstAccount
+      ? "admin"
+      : isSecondAccount
+      ? "event_staff"
+      : isThirdAccount
+      ? "user_editor"
+      : "standard_user";
     const hashedassword = await hashPassword(req.body.password);
     req.body.password = hashedassword;
     const user = await userModel.create(req.body);

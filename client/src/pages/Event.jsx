@@ -38,21 +38,21 @@ const Event = () => {
     <Wrapper>
       <Query>
         <Navbar isActive="Event" />
-        <main>
-          <section className="first">
-            <section>
-              <img
-                src={landing_logo}
-                alt="Landing Page Logo"
-                className="landing_logo"
-              />
-              <h1>ARCADIA</h1>
-              <h2>Environmental Events</h2>
-              <p>
-                Foster discourse and drive actionable sustainability solutions
-              </p>
-            </section>
+        <section className="first">
+          <section>
+            <img
+              src={landing_logo}
+              alt="Landing Page Logo"
+              className="landing_logo"
+            />
+            <h1>ARCADIA</h1>
+            <h2>Environmental Events</h2>
+            <p>
+              Foster discourse and drive actionable sustainability solutions
+            </p>
           </section>
+        </section>
+        <main>
           <section className="second">
             {data.map((value) => (
               <Featured key={value._id} data={value} />
@@ -76,8 +76,8 @@ const Event = () => {
                       "This project is focused on addressing the growing plastic pollution crisis by promoting the reduction, reuse, and recycling of plastics.",
                     btn1: true,
                     btn2: true,
-                    btn1Text: "Sample",
-                    btn2Text: "Sample",
+                    btn1Text: "Learn More",
+                    btn2Text: "Register",
                   },
                   {
                     key: 1,
@@ -92,8 +92,8 @@ const Event = () => {
                       "This project is focused on addressing the growing plastic pollution crisis by promoting the reduction, reuse, and recycling of plastics.",
                     btn1: true,
                     btn2: true,
-                    btn1Text: "Sample",
-                    btn2Text: "Sample",
+                    btn1Text: "Learn More",
+                    btn2Text: "Register",
                   },
                   {
                     key: 2,
@@ -108,8 +108,8 @@ const Event = () => {
                       "This project is focused on addressing the growing plastic pollution crisis by promoting the reduction, reuse, and recycling of plastics.",
                     btn1: true,
                     btn2: true,
-                    btn1Text: "Sample",
-                    btn2Text: "Sample",
+                    btn1Text: "Learn More",
+                    btn2Text: "Register",
                   },
                 ]}
               />
@@ -131,8 +131,8 @@ const Event = () => {
                       "This project is focused on addressing the growing plastic pollution crisis by promoting the reduction, reuse, and recycling of plastics.",
                     btn1: true,
                     btn2: false,
-                    btn1Text: "Sample",
-                    btn2Text: "Sample",
+                    btn1Text: "Learn More",
+                    btn2Text: "Register",
                   },
                   {
                     key: 4,
@@ -147,8 +147,8 @@ const Event = () => {
                       "This project is focused on addressing the growing plastic pollution crisis by promoting the reduction, reuse, and recycling of plastics.",
                     btn1: true,
                     btn2: false,
-                    btn1Text: "Sample",
-                    btn2Text: "Sample",
+                    btn1Text: "Learn More",
+                    btn2Text: "Register",
                   },
                   {
                     key: 5,
@@ -163,17 +163,17 @@ const Event = () => {
                       "This project is focused on addressing the growing plastic pollution crisis by promoting the reduction, reuse, and recycling of plastics.",
                     btn1: true,
                     btn2: false,
-                    btn1Text: "Sample",
-                    btn2Text: "Sample",
+                    btn1Text: "Learn More",
+                    btn2Text: "Register",
                   },
                 ]}
               />
             </article>
           </section>
-          <section className="six">
-            <Footer />
-          </section>
         </main>
+        <section className="six">
+          <Footer />
+        </section>
       </Query>
     </Wrapper>
   );

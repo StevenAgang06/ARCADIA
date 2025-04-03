@@ -1,5 +1,6 @@
 export const role = {
   ADMIN: "admin",
-  STAFF: "staff",
-  USER: "user",
+  EVENT_STAFF: "event_staff",
+  USER_EDITOR: "user_editor",
+  STANDARD_USER: "standard_user",
 };

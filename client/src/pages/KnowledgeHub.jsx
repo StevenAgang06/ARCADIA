@@ -36,19 +36,19 @@ const KnowledgeHub = () => {
     <Wrapper>
       <Query>
         <Navbar isActive="KnowledgeHub" />
-        <main>
-          <section className="first">
-            <section>
-              <img
-                src={landing_logo}
-                alt="Landing Page Logo"
-                className="landing_logo"
-              />
-              <h1>ARCADIA</h1>
-              <h2>Knowledge Hub</h2>
-              <p>Your knowledge hub for Waste Management</p>
-            </section>
+        <section className="first">
+          <section>
+            <img
+              src={landing_logo}
+              alt="Landing Page Logo"
+              className="landing_logo"
+            />
+            <h1>ARCADIA</h1>
+            <h2>Knowledge Hub</h2>
+            <p>Your knowledge hub for Waste Management</p>
           </section>
+        </section>
+        <main>
           <section className="second">
             {data.map((value) => (
               <Featured key={value._id} data={value} />
@@ -166,10 +166,10 @@ const KnowledgeHub = () => {
               />
             </article>
           </section>
-          <section className="six">
-            <Footer />
-          </section>
         </main>
+        <section className="six">
+          <Footer />
+        </section>
       </Query>
     </Wrapper>
   );

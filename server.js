@@ -16,6 +16,7 @@ import userRoutes from "./routes/userRoutes.js ";
 dotenv.config();
 const app = express();
 app.use(express.json());
+app.use(cookieParser());
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }

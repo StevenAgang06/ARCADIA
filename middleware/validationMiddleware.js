@@ -1,5 +1,6 @@
 import { body, param, validationResult } from "express-validator";
-import { Unauthorized, BadRequest } from "../Error/customError.js";
+import { Unauthorized, BadRequest, NotFound } from "../Error/customError.js";
+import mongoose from "mongoose";
 
 const validationErrors = (validateValue) => {
   return [
@@ -32,6 +33,15 @@ const userValidation = {
       .withMessage("Password is Required")
       .isLength({ min: 8 })
       .withMessage("Password must be 8 characters long"),
+  ]),
+  paramValidation: validationErrors([
+    param("id").custom(async (value, { req }) => {
+      const isValidId = mongoose.Types.ObjectId.isValid(value);
+      if (isValidId) {
+        throw new BadRequest("Id is not valid");
+      }
+      
+    }),
   ]),
 };
 

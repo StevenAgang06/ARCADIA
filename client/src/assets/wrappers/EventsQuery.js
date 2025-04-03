@@ -31,6 +31,10 @@ const Query = styled.section`
     }
   }
   @media (min-width: 1399px) {
+    main {
+      max-width: 80%;
+      margin: 0 auto;
+    }
   }
 `;
 
