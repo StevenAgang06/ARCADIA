@@ -1,6 +1,7 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
 
+// Complete Info Modal, and fix some of the design bug in mobile
 const InfoModal = ({ show, onHide, data }) => {
   console.log(data);
   return (
