@@ -10,6 +10,9 @@ const Query = styled.section`
     header section {
       flex-wrap: nowrap;
     }
+      header section nav{
+      overflow: visible;
+      }
     .toggle-btn {
       display: none;
     }

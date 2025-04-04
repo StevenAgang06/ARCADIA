@@ -3,4 +3,42 @@
 }
 .modalBodyContainer figure img {
   max-width: 100%;
+  border-radius: 0.25rem;
+}
+.modalBodyContainer .list{
+  margin-block: 2rem;
+}
+.modalBodyContainer ul li{
+  list-style-type:square;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.modalBodyContainer figcaption section{
+  margin-block: 1.5rem;
+}
+.modalBodyContainer ul li::marker{
+  color: #087f5b;
+}
+.modalBodyContainer figcaption article{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-block: 2rem;
+}
+.modalBodyContainer figcaption p{
+  font-size: 1.5rem;
+}
+@media (min-width: 992px) {
+  .modalBodyContainer figcaption article{
+    flex-direction: row;
+  }
+  .modalBodyContainer figcaption section{
+    margin-block: 0;
+  }
+}
+@media (min-width: 824px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1399px) {
 }

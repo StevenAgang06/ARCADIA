@@ -54,6 +54,7 @@ const Wrapper = styled.section`
     padding: 1rem;
   }
   button {
+  max-width: 100%;
     font-size: 1.3rem;
     border: none;
     padding-block: 0.5rem;
@@ -79,7 +80,7 @@ const Wrapper = styled.section`
     .btnContainer {
       display: flex;
       justify-content: center;
-      width: 50%;
+      width: 80%;
       margin: 1.5rem auto;
     }
   }

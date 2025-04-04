@@ -5,6 +5,8 @@ import { Conflict } from "../Error/customError.js";
 
 const userSchema = new mongoose.Schema(
   {
+    name: String,
+    lastname: String,
     email: String,
     password: String,
     role: {

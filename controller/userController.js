@@ -5,7 +5,7 @@ import { comparePassword, hashPassword } from "../utils/hashPassword.js";
 import { createJWT, verifyJWT } from "../Utils/tokenUtils.js";
 export const user = {
   login: async (req, res) => {
-    const user = await userModelAction.getUser(req);
+    const user = await userModelAction.getUser(req); 
     if (!user) {
       throw new NotFound("Wrong Email or Password");
     } else {
@@ -29,10 +29,7 @@ export const user = {
     res.status(StatusCodes.OK).json(`Register Successfully: ${user}`);
   },
   current_user: async (req, res) => {
-    const { cookies } = req;
-    console.log(cookies);
-    const user = verifyJWT(cookies);
-    console.log(user);
+    console.log(req);
     res.status(200).json("OK");
   },
 };

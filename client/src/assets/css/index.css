@@ -385,6 +385,7 @@ header figure p {
   display: flex;
   flex-direction: column;
   font-size: 2rem;
+  z-index: 999999;
 }
 
 .popover-body a {
@@ -405,4 +406,8 @@ header figure p {
 .Toastify {
   font-size: 1.5rem;
   z-index: 2;
+}
+
+.dropdown{
+  z-index: 999999;
 }

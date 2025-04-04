@@ -10,8 +10,9 @@ import cookieParser from "cookie-parser";
 // Cloud
 import { v2 as cloudinary } from "cloudinary";
 
-// Components
-import userRoutes from "./routes/userRoutes.js ";
+// Routes
+import userRoutes from "./routes/userRoutes.js";
+import eventsRoutes from "./routes/eventsRoutes.js"
 
 dotenv.config();
 const app = express();
@@ -30,6 +31,7 @@ app.get("/", (req, res) => {
   res.status(404).json({ msg: "Welcome User" });
 });
 app.use("/arcadia", userRoutes);
+app.use("/arcadia/events", eventsRoutes )
 app.use("*", (req, res) => {
   res.status(404).json({ msg: "Not Found" });
 });

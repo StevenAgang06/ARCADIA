@@ -24,13 +24,24 @@ const InfoModal = ({ show, onHide, data }) => {
             />
           </figure>
           <figcaption>
-            <h1>{data.title}</h1>
-            <h3>{data.sub}</h3>
-            <ul>
+            <article>
+              <section>
+              <h1>{data.title}</h1>
+              <h3>{data.sub}</h3>
+              </section>
+              <ul>
+                {Object.values(data.speakers).map((list, index) => (
+                  <li key={index}>{list}</li>
+                ))}
+              </ul>
+            </article>
+            <ul className="list">
               {Object.values(data.list).map((list, index) => (
                 <li key={index}>{list}</li>
               ))}
             </ul>
+            {data.description.one ? <p>{data.description.one}</p> : null}
+            {data.description.two ? <p>{data.description.two}</p> : null}
           </figcaption>
         </section>
       </Modal.Body>

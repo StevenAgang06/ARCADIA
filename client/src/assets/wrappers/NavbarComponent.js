@@ -33,6 +33,7 @@ const Wrapper = styled.section`
     overflow: auto;
     transition: 200ms ease-in-out;
     width: 100%;
+    position: relative;    
   }
   .navShow {
     padding-block: 1.5rem;
@@ -84,6 +85,16 @@ const Wrapper = styled.section`
     font-weight: 600;
     background-color: transparent;
     box-shadow: 0px 0px 0px transparent;
+  }
+  .dropdown a {
+    font-size: 1.5rem;
+    padding-block: 0.2rem;
+    padding-inline-end: 1rem;
+    text-align: center;
+   
+  }
+  .dropdown a:hover{
+    color: #087f5b;
   }
 `;
 

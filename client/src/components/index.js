@@ -11,3 +11,4 @@ export { default as CarouselComponent } from "./CarouselComponent";
 export { default as FormRow } from "./FormRow";
 export { default as InfoModal } from "./InfoModal";
 export { default as LoginAndRegisterUtil } from "./LoginAndRegisterUtil";
+export {default as NavLinks} from "./NavLinks"

@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Wrapper from "../assets/wrappers/NavbarComponent";
 import Query from "../assets/wrappers/Query";
-import { WebLogo } from "../components";
+import { WebLogo, NavLinks } from "../components";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { useHomeLayoutContext } from "../pages/HomeLayout";
@@ -54,10 +54,10 @@ const Navbar = ({ isActive }) => {
                     Knowledge Hub
                   </Link>
                 </li>
-                {/* <li>
-                <Link to="/">Innovation</Link>
-              </li> */}
-              </ul>
+                <li className="dropdowns">
+                <NavLinks /> 
+                </li>
+              </ul> 
             </nav>
           </section>
         </header>
